@@ -12,8 +12,8 @@ class Main{
         System.out.println();
     }
 
-    // select minimum and put it in the right place
-    public static void selectionSort(int[] arr){
+    // SELECTION SORT - select minimum and put it in the right place
+    public static void selectionSort(int[] arr) {
         int min;
         for (int i = 0; i < arr.length-1; i++) {
             min = i;
@@ -26,11 +26,18 @@ class Main{
         }
     }
 
-
+    // BUBBLE SORT - opposite - pushes maximum to the last - adjacent swaps
+    public static void bubbleSort(int[] arr){
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr.length-i- 1; j++) {
+                if(arr[j] > arr[j+1]) swap(arr, j, j+1);
+            }
+        }
+    }
 
     public static void main(String[] args){
         int[] arr = {34,16,37,45,67,12,21};
-        selectionSort(arr);
+        bubbleSort(arr);
         print(arr);
 
     }
