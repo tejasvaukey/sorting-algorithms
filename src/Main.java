@@ -1,0 +1,37 @@
+class Main{
+
+    public static void swap(int[] arr, int a, int b){
+        int temp = arr[a];
+        arr[a] = arr[b];
+        arr[b] = temp;
+    }
+    public static void print(int[] arr){
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] +" ");
+        }
+        System.out.println();
+    }
+
+    // select minimum and put it in the right place
+    public static void selectionSort(int[] arr){
+        int min;
+        for (int i = 0; i < arr.length-1; i++) {
+            min = i;
+            for (int j = i; j < arr.length; j++) {
+                if(arr[j] < arr[min]){
+                    min = j;
+                }
+            }
+            swap(arr, i, min);
+        }
+    }
+
+
+
+    public static void main(String[] args){
+        int[] arr = {34,16,37,45,67,12,21};
+        selectionSort(arr);
+        print(arr);
+
+    }
+}
