@@ -35,9 +35,23 @@ class Main{
         }
     }
 
+    // INSERTION SORT -  takes element and places it in its correct position
+    public static void insertionSort(int[] arr){
+        int key;
+        for (int i = 0; i < arr.length; i++) {
+            key = arr[i];
+            int j = i - 1;
+            while(j>=0 && arr[j] > key){
+                arr[j+1] = arr[j];
+                j--;
+            }
+            arr[j+1] = key;
+        }
+    }
+
     public static void main(String[] args){
         int[] arr = {34,16,37,45,67,12,21};
-        bubbleSort(arr);
+        insertionSort(arr);
         print(arr);
 
     }
