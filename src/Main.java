@@ -121,7 +121,6 @@ class Main{
      }
 
 
-
     public static void main(String[] args){
         int[] arr = {3,6,7,5,4,1,2};
         mergeSort(arr, 0, arr.length-1);
